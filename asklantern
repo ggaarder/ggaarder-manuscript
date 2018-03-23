@@ -1,0 +1,19 @@
+libdbusmenu-glib.so.4: wrong ELF class: ELFCLASS32
+
+    $ lantern 
+    Running installation script...
+    /usr/lib/lantern/lantern-binary: OK
+    /home/ggaarder/.lantern/bin/lantern: error while loading shared libraries:
+    libdbusmenu-glib.so.4: wrong ELF class: ELFCLASS32
+
+System information:
+
+    $ uname -a
+    Linux porteus 3.13.6-porteus #1 SMP PREEMPT Fri Mar 7 06:53:36 Local time z
+    one must be set--s x86_64 Intel(R) Core(TM) i3-3110M CPU @ 2.40GHz GenuineI
+    ntel GNU/Linux
+    $ file /usr/lib/libdbusmenu-glib.so.4.0.12 
+    /usr/lib/libdbusmenu-glib.so.4.0.12: ELF 32-bit LSB  shared object, Intel 8
+    0386, version 1 (SYSV), dynamically linked, BuildID[sha1]=2e68fdd2efd354827
+    5ef418e98d46fbf7f2e242b, stripped
+    
