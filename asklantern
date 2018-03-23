@@ -1,5 +1,7 @@
 libdbusmenu-glib.so.4: wrong ELF class: ELFCLASS32
-https://github.com/getlantern/forum/issues/9057
+
+- https://github.com/getlantern/forum/issues/9057
+- https://github.com/getlantern/lantern/issues/7437
 
     $ lantern 
     Running installation script...
