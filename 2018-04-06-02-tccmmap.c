@@ -3,11 +3,11 @@ The built-in memory and bounds checker cannot handle mmap'd memory and judges er
 
 Hi,
 
-I just tried -b to see whether I forgot to free something, and I found that the checker will alert when I use the memory mmap'd. Then I want to write a demo for report, during which I failed opening a file and tried to print the errno to see what was going on, and found that the checker also disapproves errno. So eventually I wrote two demos.
+I just tried -b to see whether I forgot to free something, and I found that the memory and bounds checker will alert when I use the memory I mmap'd. While I was writing a demo for report, I found that the checker also reported out of region when I accessed errno. I was to print errno to see if I really opened the file to be mmap'd.
 
-I think the warning for the mmap'd memory is not a problem, just needed to be point out in the document. But the errno one is strange.
+I think the warning for the mmap'd memory is not a problem, just needed to be pointed out in the document. But the errno one is quite strange.
 
-By the way, this project is extraordinary great! I use it all the time. It is so wonderful for to find people like you who remember what good software looks like.
+By the way, this project is extraordinary great! I use it all the time. It is so wonderful for me to find people like you who remember what good software looks like.
 
 Output:
   $ tcc 2018-04-06-02-tccmmap.c -b
@@ -41,7 +41,7 @@ Sent to  tinycc-devel@nongnu.org
 
 void handleseg(int signum) {
   fprintf(stderr, "%d: Signal SIGSEGV (%d) received\n", getpid(), signum);
-  exit(0);
+  _exit(EXIT_SUCCESS);
 }
 
 int main() {
