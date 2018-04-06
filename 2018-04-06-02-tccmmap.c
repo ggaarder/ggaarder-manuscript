@@ -7,7 +7,7 @@ I just tried -b to see whether I forgot to free something, and I found that the 
 
 I think the warning for the mmap'd memory is not a problem, just needed to be pointed out in the document. But the errno one is quite strange.
 
-By the way, this project is extraordinary great! I use it all the time. It is so wonderful for me to find people like you who remember what good software looks like.
+The demo is sent together as an attachment.
 
 Output:
   $ tcc 2018-04-06-02-tccmmap.c -b
@@ -23,6 +23,8 @@ Output:
 My TCC Version:
   $ tcc -v
   tcc version 0.9.27 (x86_64 Linux)
+
+By the way, this project is extraordinary great! I use it all the time. It is so wonderful for me to find people like you who remember what good software looks like.
 
 Regards,
 George Gaarder
